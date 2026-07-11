@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agent Flux</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+color:#1f2937;
+}
+
+
+header{
+background:#062b55;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+
+nav a{
+color:white;
+margin:0 12px;
+cursor:pointer;
+text-decoration:none;
+}
+
+
+nav a:hover{
+color:#16a34a;
+}
+
+
+
+.page{
+display:none;
+padding:70px 8%;
+min-height:80vh;
+}
+
+
+.active{
+display:block;
+}
+
+
+
+.hero{
+
+background:
+linear-gradient(
+rgba(6,43,85,.85),
+rgba(6,43,85,.85)
+),
+url("https://images.unsplash.com/photo-1551836022-d5d88e9218df");
+
+background-size:cover;
+color:white;
+padding:120px 8%;
+
+}
+
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+
+.hero p{
+
+font-size:20px;
+margin:25px 0;
+
+}
+
+
+
+.btn{
+
+background:#16a34a;
+color:white;
+padding:15px 30px;
+border:0;
+border-radius:5px;
+cursor:pointer;
+margin:10px;
+
+}
+
+
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+
+
+.card{
+
+background:#f8fafc;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px #ddd;
+
+}
+
+
+
+.job{
+
+border:1px solid #ddd;
+padding:25px;
+margin:15px;
+border-radius:10px;
+
+}
+
+
+
+input,textarea{
+
+width:100%;
+padding:15px;
+margin:10px 0;
+
+}
+
+
+
+footer{
+
+background:#021a35;
+color:white;
+padding:25px;
+text-align:center;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Agent Flux
+</div>
+
+
+<nav>
+
+<a onclick="openPage('home')">Home</a>
+<a onclick="openPage('employers')">Employers</a>
+<a onclick="openPage('candidates')">Candidates</a>
+<a onclick="openPage('jobs')">Jobs</a>
+<a onclick="openPage('contact')">Contact</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+<!-- HOME -->
+
+<div id="home" class="page active">
+
+
+<section class="hero">
+
+
+<h1>
+Helping Insurance Companies Hire Qualified Agents Faster
+</h1>
+
+
+<p>
+Agent Flux connects companies with professional insurance agents.
+</p>
+
+
+<button class="btn" onclick="openPage('employers')">
+Hire Talent
+</button>
+
+
+<button class="btn" onclick="openPage('jobs')">
+Find Jobs
+</button>
+
+
+</section>
+
+
+<h2>
+Our Services
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+<h3>Talent Search</h3>
+<p>Find licensed insurance professionals.</p>
+</div>
+
+
+<div class="card">
+<h3>Candidate Screening</h3>
+<p>Review skills and experience.</p>
+</div>
+
+
+<div class="card">
+<h3>Recruitment Support</h3>
+<p>Complete hiring assistance.</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- EMPLOYERS -->
+
+
+<div id="employers" class="page">
+
+
+<h1>
+Employers
+</h1>
+
+
+<p>
+Find qualified insurance agents for your company.
+</p>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Post Your Requirement
+</h3>
+
+<p>
+Tell Agent Flux what type of agents you need.
+</p>
+
+<button class="btn">
+Start Hiring
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Recruitment Process
+</h3>
+
+<p>
+We source, screen and connect candidates.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CANDIDATES -->
+
+
+<div id="candidates" class="page">
+
+
+<h1>
+Candidates
+</h1>
+
+
+<p>
+Find your next insurance career opportunity.
+</p>
+
+
+<div class="card">
+
+
+<h3>
+Create Profile
+</h3>
+
+
+<input placeholder="Full Name">
+
+<input placeholder="Email">
+
+
+<button class="btn">
+Register
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- JOBS -->
+
+
+<div id="jobs" class="page">
+
+
+<h1>
+Available Jobs
+</h1>
+
+
+
+<div class="job">
+
+<h2>
+Licensed Health Insurance Agent
+</h2>
+
+<p>
+Remote USA
+</p>
+
+<button class="btn"
+onclick="apply('Health Insurance Agent')">
+Apply
+</button>
+
+
+</div>
+
+
+
+
+<div class="job">
+
+<h2>
+Medicare Sales Agent
+</h2>
+
+<p>
+Remote
+</p>
+
+
+<button class="btn"
+onclick="apply('Medicare Sales Agent')">
+Apply
+</button>
+
+
+</div>
+
+
+
+<div class="job">
+
+<h2>
+Life Insurance Specialist
+</h2>
+
+<p>
+Full Time
+</p>
+
+
+<button class="btn"
+onclick="apply('Life Insurance Specialist')">
+Apply
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<div id="contact" class="page">
+
+
+<h1>
+Contact Agent Flux
+</h1>
+
+
+
+<input placeholder="Company Name">
+
+
+<input placeholder="Email">
+
+
+<textarea placeholder="Message"></textarea>
+
+
+<button class="btn"
+onclick="sendMessage()">
+Submit
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+© 2026 Agent Flux
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+function openPage(page){
+
+
+let pages=document.querySelectorAll(".page");
+
+
+pages.forEach(function(p){
+
+p.classList.remove("active");
+
+});
+
+
+document.getElementById(page).classList.add("active");
+
+
+window.scrollTo(0,0);
+
+
+}
+
+
+
+function apply(job){
+
+
+alert(
+"Application opened for:\n"+job
+);
+
+
+}
+
+
+
+function sendMessage(){
+
+
+alert(
+"Message submitted to Agent Flux!"
+);
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
